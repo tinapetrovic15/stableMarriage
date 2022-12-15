@@ -10,8 +10,8 @@ public class Main {
         String pathForOutput = "src/main/java/org/example/files/stableMarriage.txt";
 
         StableMarriage stableMarrige = new StableMarriage(pathForWomen, pathForMen);
-        stableMarrige.findCouple();
-        stableMarrige.printCouple();
+        stableMarrige.findAllCouples();
+        stableMarrige.printAllCouples();
         stableMarrige.printSolutionInFile(pathForOutput);
 
     }

@@ -56,7 +56,7 @@ public class StableMarriage {
         }
         return null;
     }
-    private void findCouple(List<Person> men, List<Person> women){
+    private void findAllCouples(List<Person> men, List<Person> women){
 
         Person freeMan = getFirstFreeMan(men);
 
@@ -79,7 +79,7 @@ public class StableMarriage {
             freeMan = getFirstFreeMan(men);
         }
     }
-    private void printCouple(List<Person> people) {
+    private void printAllCouples(List<Person> people) {
         for (Person person : people) {
             System.out.println(person);
         }
@@ -90,11 +90,11 @@ public class StableMarriage {
         }
         fileWriter.close();
     }
-    public void findCouple(){
-        findCouple(boys, girls);
+    public void findAllCouples(){
+        findAllCouples(boys, girls);
     }
-    public void printCouple(){
-        printCouple(girls);
+    public void printAllCouples(){
+        printAllCouples(girls);
     }
     public void printSolutionInFile(String path) throws IOException {
         FileWriter fileWriter = new FileWriter(path);
