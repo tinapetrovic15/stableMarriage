@@ -35,7 +35,7 @@ public class StableMarriage {
                     Integer womenID = Integer.parseInt(myReader.nextLine());
                     rang.add(j,womenID);
                 }
-                people.add(new Person(name,rang,isWoman));
+                people.add(new Person(name,rang,i));
             }
         }
         myReader.close();
@@ -88,7 +88,6 @@ public class StableMarriage {
         for (Person person : people) {
             fileWriter.write(String.valueOf(person));
         }
-        fileWriter.close();
     }
     public void findAllCouples(){
         findAllCouples(boys, girls);
@@ -99,5 +98,10 @@ public class StableMarriage {
     public void printSolutionInFile(String path) throws IOException {
         FileWriter fileWriter = new FileWriter(path);
         printSolutionInFile(fileWriter, girls);
+    }
+    public void printAllSolution(FileWriter fileWriter) throws IOException {
+        for (Person person : girls) {
+            fileWriter.write(String.valueOf(person));
+        }
     }
 }

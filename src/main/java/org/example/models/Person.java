@@ -3,19 +3,12 @@ package org.example.models;
 import java.util.List;
 
 public class Person {
-    static Integer IDMan = 0;
-    static Integer IDWoman = 0;
     public Integer id;
     String name;
     public List<Integer> rang;
     public Person partner;
-    public Person(String ime, List<Integer> rang, Boolean isWoman) {
-        if(isWoman) {
-            this.id = IDWoman++;
-        }
-        else {
-            this.id = IDMan++;
-        }
+    public Person(String ime, List<Integer> rang, Integer id) {
+        this.id = id;
         this.name = ime;
         this.rang = rang;
         this.partner = null;
