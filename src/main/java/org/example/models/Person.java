@@ -3,7 +3,7 @@ package org.example.models;
 import java.util.List;
 
 public class Person {
-    public Integer id;
+    public int id;
     String name;
     public List<Integer> rang;
     public Person partner;
